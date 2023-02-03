@@ -1,0 +1,12 @@
+@use '../../../assets/scss/abstracts/colors' as cl;
+
+.meals {
+  width: 80%;
+
+  margin: 4.8rem auto;
+  padding: 3.2rem;
+
+  background-color: cl.$color-gray-very-light;
+
+  border-radius: 24px;
+}
