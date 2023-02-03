@@ -1,0 +1,35 @@
+@use '../../../assets/scss/abstracts' as ab;
+
+.meal {
+  @include ab.flex(row, space-between, center);
+  padding: 2.4rem 0 1.8rem;
+  border-bottom: 1px solid ab.$color-main-light;
+
+  .meal__name {
+    font-size: 1.8rem;
+  }
+
+  .meal__description {
+    font-style: italic;
+    padding: 1.2rem 0 0.8rem;
+  }
+
+  .meal__price {
+    font-weight: bold;
+    color: ab.$color-main;
+  }
+
+  .meal__form {
+    @include ab.flex(column, flex-start, flex-end, 0.8rem);
+  }
+
+  .meal__input {
+    width: 9.6rem;
+
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+
+    padding-left: 1.2rem;
+  }
+}
