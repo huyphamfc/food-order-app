@@ -1,3 +1,5 @@
+@use '../abstracts' as ab;
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -11,6 +13,7 @@ html {
 body {
   font-family: sans-serif;
   font-size: 1.6rem;
+  background-color: ab.$color-gray-dark;
 }
 
 ul {
@@ -18,7 +21,8 @@ ul {
 }
 
 button,
-a {
+a,
+input {
   display: inline-block;
 }
 
