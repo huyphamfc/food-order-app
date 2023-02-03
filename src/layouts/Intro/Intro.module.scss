@@ -1,0 +1,37 @@
+@use '../../assets/scss/abstracts' as ab;
+
+.intro {
+  .intro__img {
+    height: 25rem;
+    overflow: hidden;
+
+    & img {
+      width: 110%;
+      height: 100%;
+      object-fit: cover;
+      transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+    }
+  }
+
+  .intro__text {
+    position: relative;
+    max-width: 52rem;
+    width: 90%;
+
+    background-color: ab.$color-gray-dark;
+    color: ab.$color-gray-very-light;
+    text-align: center;
+
+    margin: auto;
+    margin-top: -10rem;
+    padding: 1rem;
+
+    border-radius: 14px;
+    box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .intro__heading {
+    font-size: 2.4rem;
+    padding: 1.2rem 0;
+  }
+}
