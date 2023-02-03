@@ -1,0 +1,31 @@
+@use '../../../assets/scss/abstracts' as ab;
+
+.cart {
+  @include ab.flex(row, space-between, center);
+
+  font-weight: bold;
+  padding: 2.4rem 0;
+
+  border-bottom: 1px solid ab.$color-main;
+
+  .cart__name {
+    font-size: 2.4rem;
+    padding: 1.6rem 0;
+  }
+
+  .cart__price {
+    color: ab.$color-main;
+  }
+
+  .cart__amount {
+    display: inline-block;
+
+    margin-left: 3.2rem;
+    padding: 0.4rem;
+
+    color: ab.$color-gray-dark;
+
+    border: 1px solid ab.$color-gray-dark;
+    border-radius: 4px;
+  }
+}
