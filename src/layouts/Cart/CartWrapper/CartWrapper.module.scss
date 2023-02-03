@@ -1,0 +1,39 @@
+@use '../../../assets/scss/abstracts' as ab;
+
+.cart__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: ab.$color-overlay;
+}
+
+.cart__content {
+  position: fixed;
+  top: 20vh;
+  left: 5%;
+  z-index: 999;
+
+  width: 90%;
+
+  background-color: ab.$color-gray-very-light;
+  padding: 2.4rem;
+  border-radius: 16px;
+
+  .cart__total {
+    @include ab.flex(row, space-between, center);
+
+    font-size: 2.4rem;
+    font-weight: bold;
+
+    padding: 2.4rem 0;
+  }
+
+  .cart__actions {
+    @include ab.flex(row, flex-end);
+  }
+}
