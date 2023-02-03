@@ -1,0 +1,34 @@
+@use '../../assets/scss/abstracts' as ab;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 5rem;
+
+  @include ab.flex(row, space-between, center);
+
+  background-color: ab.$color-main;
+  color: ab.$color-gray-very-light;
+
+  padding: 3.2rem 10%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+
+  .header__badge {
+    font-weight: bold;
+    background-color: ab.$color-main-light;
+
+    margin-left: 0.5rem;
+    padding: 0.25rem 1rem;
+
+    border-radius: 24px;
+
+    &:hover {
+      background-color: ab.$color-main-dark;
+    }
+  }
+}
