@@ -13,9 +13,11 @@
 }
 
 .cart__content {
-  position: fixed;
+  position: absolute;
   top: 20vh;
-  left: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+
   z-index: 999;
 
   width: 90%;
