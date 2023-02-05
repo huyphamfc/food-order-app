@@ -1,16 +1,29 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 
 import styles from './CartItem.module.scss';
 import { Button } from 'components';
+import { increaseMeal, decreaseMeal } from 'store';
 
 type CartItemProps = {
+  id: string;
   name: string;
   price: number;
-  amount: string;
+  amount: number;
 };
 
 function CartItem(props: CartItemProps) {
-  const { name, price, amount } = props;
+  const { id, name, price, amount } = props;
+
+  const dispatch = useDispatch();
+
+  const handleAddMeal = () => {
+    dispatch(increaseMeal(id));
+  };
+
+  const handleRemoveMeal = () => {
+    dispatch(decreaseMeal(id));
+  };
 
   return (
     <li className={styles.cart}>
@@ -20,8 +33,12 @@ function CartItem(props: CartItemProps) {
         <span className={styles.cart__amount}>x{amount}</span>
       </div>
       <div>
-        <Button outline>-</Button>
-        <Button outline>+</Button>
+        <Button outline onClick={handleRemoveMeal}>
+          -
+        </Button>
+        <Button outline onClick={handleAddMeal}>
+          +
+        </Button>
       </div>
     </li>
   );
